@@ -1,13 +1,22 @@
 import React from "react";
+import styles from './styles';
 
 class Home extends React.Component {
   
     render() { 
-        return (
-        <div>
-            <h2 style={{ margin:240, backgroundColor:'lightBlue'}}> Hi</h2>
-        </div>
-     );
+     return (
+				<div style={styles.body}>
+					<div style={styles.header}>
+						<div style={styles.right}></div>
+						<div style={styles.center}></div>
+						<div style={styles.left}></div>
+					</div>
+                    <div style={styles.main}> Hi
+                        <div style={styles.form}></div>
+                    </div>
+					<div style={styles.footer}> hello</div>
+				</div>
+			);
     }
 }
  
