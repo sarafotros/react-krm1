@@ -13,7 +13,8 @@ class Mybtn extends Component {
                         height: 45,
                         fontFamily: '"Baloo 2" ,cursive',
                         backgroundColor: bg,
-                    }}
+            }}
+            onClick={this.props.onClick}
                 >
                     {title}
                 </button>
