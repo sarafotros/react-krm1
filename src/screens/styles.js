@@ -29,19 +29,22 @@ const styles = {
 	},
 	right: {
 		backgroundColor: '#fff',
-		height: 80,
-		width: 100,
+		height: 40,
+		width: 150,
 		color: 'black',
 	},
 	center: {
 		backgroundColor: '#00f',
-		height: 20,
+		height: 40,
 		width: 350,
 	},
 	left: {
 		backgroundColor: '#0f0',
-		height: 20,
-		width: 60,
+		height: 40,
+		width: 120,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 	form: {
 		height: 400,

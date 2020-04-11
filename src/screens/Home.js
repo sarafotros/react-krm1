@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './styles';
-import Mybtn from '../components/Mybtn'
+import Mybtn from '../components/Mybtn';
+import MyTime from '../components/MyTime'
 
 class Home extends React.Component {
   
@@ -12,7 +13,9 @@ class Home extends React.Component {
                     <p> React Developer</p>
                 </div>
                 <div style={styles.center}></div>
-                <div style={styles.left}></div>
+                 <div style={styles.left}>
+                     <MyTime/>
+                </div>
             </div>
             <div style={styles.main}>
                 <div style={styles.form}>
