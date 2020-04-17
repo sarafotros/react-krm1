@@ -34,7 +34,77 @@ class Home extends React.Component {
     }
 
 	render() {
-		
+        
+        const userList = this.state.users.map((user) => {
+        return (
+            <tr
+                key={user.id}
+                style={
+                    user.age > 25
+                        ? { backgroundColor: '#81C784', color: '#fff' }
+                        : { backgroundColor: '#f44336', color: '#fff' }
+                }
+            >
+                <td
+                    style={{
+                        width: 80,
+                        padding: 10,
+                        border: '1px solid #e1e1e1',
+                        textAlign: 'center',
+                    }}
+                >
+                    {user.id}
+                </td>
+                <td
+                    style={{
+                        width: 80,
+                        padding: 10,
+                        border: '1px solid #e1e1e1',
+                        textAlign: 'center',
+                    }}
+                >
+                    {user.name}
+                </td>
+                <td
+                    style={{
+                        width: 80,
+                        padding: 10,
+                        border: '1px solid #e1e1e1',
+                        textAlign: 'center',
+                    }}
+                >
+                    {user.field}
+                </td>
+                <td
+                    style={{
+                        width: 80,
+                        padding: 10,
+                        border: '1px solid #e1e1e1',
+                        textAlign: 'center',
+                    }}
+                >
+                    {user.age}
+                </td>
+                <td
+                    style={{
+                        width: 80,
+                        padding: 10,
+                        border: '1px solid #e1e1e1',
+                        textAlign: 'center',
+                    }}
+                >
+                    <button
+                        style={{ borderBottom: '2px solid grey', padding: 5 }}
+                        onClick={() => {
+                            this.delete(user.id);
+                        }}
+                    >
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        );
+        })
 		return (
 			<div style={styles.body}>
 				<div style={styles.header}>
@@ -99,76 +169,7 @@ class Home extends React.Component {
 								</tr>
 							</thead>
 							<tbody>
-								{this.state.users.map((user) => {
-									return (
-										<tr
-											key={user.id}
-											style={
-												user.age > 25
-													? { backgroundColor: '#81C784', color: '#fff' }
-													: { backgroundColor: '#f44336', color: '#fff' }
-											}
-										>
-											<td
-												style={{
-													width: 80,
-													padding: 10,
-													border: '1px solid #e1e1e1',
-													textAlign: 'center',
-												}}
-											>
-												{user.id}
-											</td>
-											<td
-												style={{
-													width: 80,
-													padding: 10,
-													border: '1px solid #e1e1e1',
-													textAlign: 'center',
-												}}
-											>
-												{user.name}
-											</td>
-											<td
-												style={{
-													width: 80,
-													padding: 10,
-													border: '1px solid #e1e1e1',
-													textAlign: 'center',
-												}}
-											>
-												{user.field}
-											</td>
-											<td
-												style={{
-													width: 80,
-													padding: 10,
-													border: '1px solid #e1e1e1',
-													textAlign: 'center',
-												}}
-											>
-												{user.age}
-											</td>
-											<td
-												style={{
-													width: 80,
-													padding: 10,
-													border: '1px solid #e1e1e1',
-													textAlign: 'center',
-												}}
-											>
-												<button
-													style={{ borderBottom: '2px solid grey', padding: 5 }}
-													onClick={() => {
-														this.delete(user.id);
-													}}
-												>
-													Delete
-												</button>
-											</td>
-										</tr>
-									);
-								})}
+								{userList}
 							</tbody>
 						</table>
 						<button onClick={this.getUsers} style={{ borderBottom:'2px solid grey', padding: 5}}>Get info</button>
