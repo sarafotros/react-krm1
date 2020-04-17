@@ -1,18 +1,22 @@
 import React from 'react';
 import styles from './styles';
-import Mybtn from '../components/Mybtn';
 import MyTime from '../components/MyTime';
-import MyInput from '../components/MyInput';
-class Home extends React.Component {
-    state = {
-       counter: 0, 
-    }
 
-    myBtnClick() {
-        console.log('log');
-        
-    }
+class Home extends React.Component {
+	state = {
+		counter: 0,
+	};
+
+	myBtnClick() {
+		console.log('log');
+	}
 	render() {
+		let users = [
+			{ id: 1, name: 'Sara', field: 'electronic', age: 37 },
+			{ id: 2, name: 'Mana', field: 'comronic', age: 47 },
+			{ id: 3, name: 'Sam', field: 'Octronic', age: 57 },
+			{ id: 4, name: 'Tara', field: 'Arcech', age: 29 },
+		];
 		return (
 			<div style={styles.body}>
 				<div style={styles.header}>
@@ -25,17 +29,97 @@ class Home extends React.Component {
 					</div>
 				</div>
 				<div style={styles.main}>
-					<div style={styles.form}>
-                        <MyInput regex={/^[a-z0-9._]{3,}@[a-z]{2,}\.[a-z]{2,4}$/i} errorText='invalid email format' />
-                        <MyInput regex={/^09[0-9]{9}$/} errorText='invalid mobile number format' />
-                        <Mybtn onClick={() => {
-                            this.setState(state => ({
-                                counter: state.counter + 1
-                            }))
-                        }}
-                            title="login" />
-                        <Mybtn title="signup" bg="#EA80FC" onClick={this.myBtnClick} />
-                        <span style={{marginLeft: 50, color: 'black', fontSize: 26 }}>{this.state.counter}</span>
+					<div style={styles.tablediv}>
+						<table style={{ color: '#000', border: '2px grey solid' }}>
+							<thead>
+								<tr>
+									<th
+										style={{
+											width: 80,
+											padding: 10,
+											border: '1px solid #e1e1e1',
+										}}
+									>
+										#
+									</th>
+									<th
+										style={{
+											width: 80,
+											padding: 10,
+											border: '1px solid #e1e1e1',
+										}}
+									>
+										Name
+									</th>
+									<th
+										style={{
+											width: 80,
+											padding: 10,
+											border: '1px solid #e1e1e1',
+										}}
+									>
+										field
+									</th>
+									<th
+										style={{
+											width: 80,
+											padding: 10,
+											border: '1px solid #e1e1e1',
+										}}
+									>
+										age
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								{users.map((user) => {
+									return (
+										<tr>
+											<td
+												style={{
+													width: 80,
+													padding: 10,
+													border: '1px solid #e1e1e1',
+													textAlign: 'center',
+												}}
+											>
+												{user.id}
+											</td>
+											<td
+												style={{
+													width: 80,
+													padding: 10,
+													border: '1px solid #e1e1e1',
+													textAlign: 'center',
+												}}
+											>
+												{user.name}
+											</td>
+											<td
+												style={{
+													width: 80,
+													padding: 10,
+													border: '1px solid #e1e1e1',
+													textAlign: 'center',
+												}}
+											>
+												{user.field}
+											</td>
+											<td
+												style={{
+													width: 80,
+													padding: 10,
+													border: '1px solid #e1e1e1',
+													textAlign: 'center',
+												}}
+											>
+												{user.age}
+											</td>
+										</tr>
+									);
+								})}
+							</tbody>
+						</table>
 					</div>
 				</div>
 				<div style={styles.footer}> hello</div>

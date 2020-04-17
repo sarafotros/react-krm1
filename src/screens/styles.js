@@ -54,5 +54,17 @@ const styles = {
 		boxShadow: '2px 2px 10px #770',
 		fontFamily: '"Baloo 2" ,cursive',
 	},
+	tablediv: {
+		height: 600,
+		width: 800,
+		color: '#000',
+		backgroundColor: '#fff',
+		borderRadius: 10,
+		boxShadow: '2px 2px 10px #770',
+		fontFamily: '"Baloo 2" ,cursive',
+		display: 'flex',
+		justifyContent: 'center',
+		paddingTop : 40
+	},
 };
 export default styles;
