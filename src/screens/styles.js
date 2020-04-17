@@ -63,8 +63,9 @@ const styles = {
 		boxShadow: '2px 2px 10px #770',
 		fontFamily: '"Baloo 2" ,cursive',
 		display: 'flex',
-		justifyContent: 'center',
-		paddingTop : 40
+		alignItems: 'center',
+		paddingTop: 40,
+		flexDirection : 'column'
 	},
 };
 export default styles;

@@ -4,19 +4,26 @@ import MyTime from '../components/MyTime';
 
 class Home extends React.Component {
 	state = {
-		counter: 0,
+        counter: 0,
+        users: [],
 	};
 
 	myBtnClick() {
 		console.log('log');
-	}
-	render() {
-		let users = [
+    }
+    
+    getUsers = () => {
+        this.setState({
+            users: [
 			{ id: 1, name: 'Sara', field: 'electronic', age: 37 },
 			{ id: 2, name: 'Mana', field: 'comronic', age: 47 },
 			{ id: 3, name: 'Sam', field: 'Octronic', age: 57 },
 			{ id: 4, name: 'Tara', field: 'Arcech', age: 29 },
-		];
+		]
+        })
+    }
+	render() {
+		
 		return (
 			<div style={styles.body}>
 				<div style={styles.header}>
@@ -72,7 +79,7 @@ class Home extends React.Component {
 								</tr>
 							</thead>
 							<tbody>
-								{users.map((user) => {
+								{this.state.users.map((user) => {
 									return (
 										<tr>
 											<td
@@ -119,7 +126,8 @@ class Home extends React.Component {
 									);
 								})}
 							</tbody>
-						</table>
+                        </table>
+                        <button onClick={this.getUsers}>Get info</button>
 					</div>
 				</div>
 				<div style={styles.footer}> hello</div>
