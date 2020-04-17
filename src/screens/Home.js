@@ -14,14 +14,25 @@ class Home extends React.Component {
     
     getUsers = () => {
         this.setState({
-            users: [
-			{ id: 1, name: 'Sara', field: 'electronic', age: 37 },
-			{ id: 2, name: 'Mana', field: 'comronic', age: 47 },
-			{ id: 3, name: 'Sam', field: 'Octronic', age: 57 },
-			{ id: 4, name: 'Tara', field: 'Arcech', age: 29 },
-		]
-        })
+					users: [
+						{ id: 1, name: 'Sara', field: 'electronic', age: 37 },
+						{ id: 2, name: 'Mana', field: 'comronic', age: 24 },
+						{ id: 3, name: 'Sam', field: 'Octronic', age: 26 },
+						{ id: 4, name: 'Tara', field: 'Arcech', age: 22 },
+						{ id: 5, name: 'Arad', field: 'Tech', age: 72 },
+					],
+				});
     }
+
+    delete = (id) => {
+        this.setState(state => ({
+            users: state.users.filter((user) => {
+              return (user.id !== id)
+            })
+        }))
+        
+    }
+
 	render() {
 		
 		return (
@@ -76,12 +87,28 @@ class Home extends React.Component {
 									>
 										age
 									</th>
+									<th
+										style={{
+											width: 80,
+											padding: 10,
+											border: '1px solid #e1e1e1',
+										}}
+									>
+										
+									</th>
 								</tr>
 							</thead>
 							<tbody>
 								{this.state.users.map((user) => {
 									return (
-										<tr>
+										<tr
+											key={user.id}
+											style={
+												user.age > 25
+													? { backgroundColor: '#81C784', color: '#fff' }
+													: { backgroundColor: '#f44336', color: '#fff' }
+											}
+										>
 											<td
 												style={{
 													width: 80,
@@ -122,12 +149,29 @@ class Home extends React.Component {
 											>
 												{user.age}
 											</td>
+											<td
+												style={{
+													width: 80,
+													padding: 10,
+													border: '1px solid #e1e1e1',
+													textAlign: 'center',
+												}}
+											>
+												<button
+													style={{ borderBottom: '2px solid grey', padding: 5 }}
+													onClick={() => {
+														this.delete(user.id);
+													}}
+												>
+													Delete
+												</button>
+											</td>
 										</tr>
 									);
 								})}
 							</tbody>
-                        </table>
-                        <button onClick={this.getUsers}>Get info</button>
+						</table>
+						<button onClick={this.getUsers} style={{ borderBottom:'2px solid grey', padding: 5}}>Get info</button>
 					</div>
 				</div>
 				<div style={styles.footer}> hello</div>
