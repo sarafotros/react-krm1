@@ -17,6 +17,9 @@ const styles = {
 	footer: {
 		backgroundColor: '#A7FFEB',
 		height: 40,
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 
 	header: {
@@ -32,11 +35,14 @@ const styles = {
 		height: 40,
 		width: 150,
 		color: 'black',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
 	},
 	center: {
 		backgroundColor: '#81D4FA',
 		height: 40,
-		width: 350,
+		width: 600,
 	},
 	left: {
 		backgroundColor: '#E1BEE7',

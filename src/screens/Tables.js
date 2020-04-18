@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles';
-import MyTime from '../components/MyTime';
+
 
 class Home extends React.Component {
 	state = {
@@ -106,77 +106,65 @@ class Home extends React.Component {
         );
         })
 		return (
-			<div style={styles.body}>
-				<div style={styles.header}>
-					<div style={styles.right}>
-						<p> React Developer</p>
-					</div>
-					<div style={styles.center}></div>
-					<div style={styles.left}>
-						<MyTime />
-					</div>
-				</div>
-				<div style={styles.main}>
-					<div style={styles.tablediv}>
-						<table style={{ color: '#000', border: '2px grey solid' }}>
-							<thead>
-								<tr>
-									<th
-										style={{
-											width: 80,
-											padding: 10,
-											border: '1px solid #e1e1e1',
-										}}
-									>
-										#
-									</th>
-									<th
-										style={{
-											width: 80,
-											padding: 10,
-											border: '1px solid #e1e1e1',
-										}}
-									>
-										Name
-									</th>
-									<th
-										style={{
-											width: 80,
-											padding: 10,
-											border: '1px solid #e1e1e1',
-										}}
-									>
-										field
-									</th>
-									<th
-										style={{
-											width: 80,
-											padding: 10,
-											border: '1px solid #e1e1e1',
-										}}
-									>
-										age
-									</th>
-									<th
-										style={{
-											width: 80,
-											padding: 10,
-											border: '1px solid #e1e1e1',
-										}}
-									>
-										
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								{userList}
-							</tbody>
-						</table>
-						<button onClick={this.getUsers} style={{ borderBottom:'2px solid grey', padding: 5}}>Get info</button>
-					</div>
-				</div>
-				<div style={styles.footer}> hello</div>
-			</div>
+
+		 <div style={styles.tablediv}>
+			<table style={{ color: '#000', border: '2px grey solid' }}>
+				<thead>
+					<tr>
+						<th
+							style={{
+								width: 80,
+								padding: 10,
+								border: '1px solid #e1e1e1',
+							}}
+						>
+							#
+						</th>
+						<th
+							style={{
+								width: 80,
+								padding: 10,
+								border: '1px solid #e1e1e1',
+							}}
+						>
+							Name
+						</th>
+						<th
+							style={{
+								width: 80,
+								padding: 10,
+								border: '1px solid #e1e1e1',
+							}}
+						>
+							field
+						</th>
+						<th
+							style={{
+								width: 80,
+								padding: 10,
+								border: '1px solid #e1e1e1',
+							}}
+						>
+							age
+						</th>
+						<th
+							style={{
+								width: 80,
+								padding: 10,
+								border: '1px solid #e1e1e1',
+							}}
+						>
+							
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{userList}
+				</tbody>
+			</table>
+			<button onClick={this.getUsers} style={{ borderBottom:'2px solid grey', padding: 5}}>Get info</button>
+		</div>
+				
 		);
 	}
 }
