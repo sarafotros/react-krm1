@@ -15,7 +15,7 @@ const styles = {
 		alignItems: 'center',
 	},
 	footer: {
-		backgroundColor: 'blue',
+		backgroundColor: '#A7FFEB',
 		height: 40,
 	},
 
@@ -28,18 +28,18 @@ const styles = {
 		alignItems: 'center',
 	},
 	right: {
-		backgroundColor: '#fff',
+		backgroundColor: '#F8BBD0',
 		height: 40,
 		width: 150,
 		color: 'black',
 	},
 	center: {
-		backgroundColor: '#00f',
+		backgroundColor: '#81D4FA',
 		height: 40,
 		width: 350,
 	},
 	left: {
-		backgroundColor: '#0f0',
+		backgroundColor: '#E1BEE7',
 		height: 40,
 		width: 120,
 		display: 'flex',
@@ -65,7 +65,22 @@ const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		paddingTop: 40,
-		flexDirection : 'column'
+		flexDirection: 'column',
+	},
+	productdiv: {
+		width: 1000,
+		color: '#000',
+		backgroundColor: '#fff',
+		borderRadius: 10,
+		boxShadow: '2px 2px 10px #770',
+		fontFamily: '"Baloo 2" ,cursive',
+		display: 'flex',
+		alignItems: 'center',
+		paddingTop: 40,
+		flexDirection: 'row',
+		justifyContent: 'space-around',
+		flexWrap: 'wrap',
+		paddingBottom: 40,
 	},
 };
 export default styles;
