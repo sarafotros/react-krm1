@@ -16,7 +16,7 @@ export default function Mybtnfunc(props) {
 				>
 					{title}
 				</button>
-				);
 			</div>
-		);
+	);
+
 }

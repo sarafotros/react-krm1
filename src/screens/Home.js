@@ -4,6 +4,7 @@ import MyTime from '../components/MyTime';
 import Products from './Products';
 import Signin from './Signin';
 import Tables from './Tables';
+import Myfunccmp from '../components/myfunccmp'
 
 
 class Home extends React.Component {
@@ -97,7 +98,7 @@ class Home extends React.Component {
 						<Signin />
 					)}
 				</div>
-				<div style={styles.footer}> hello</div>
+				<div style={styles.footer}> <Myfunccmp/></div>
 			</div>
 		);
 	}
