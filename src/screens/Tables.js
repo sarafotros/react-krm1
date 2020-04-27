@@ -94,7 +94,7 @@ class Home extends React.Component {
                     }}
                 >
                     <button
-                        style={{ borderBottom: '2px solid grey', padding: 5 }}
+                        style={{ borderBottom: '2px solid grey', padding: 5}}
                         onClick={() => {
                             this.delete(user.id);
                         }}

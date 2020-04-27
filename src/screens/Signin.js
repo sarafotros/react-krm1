@@ -3,7 +3,7 @@ import styles from './styles';
 import Mybtn from '../components/Mybtn';
 import Mybtnfunc from '../components/Mybtnfunc';
 import MyInput from '../components/MyInput';
-class Home extends React.Component {
+class Signin extends React.Component {
     state = {
        counter: 0, 
     }
@@ -49,4 +49,4 @@ class Home extends React.Component {
 	}
 }
 
-export default Home;
+export default Signin;
