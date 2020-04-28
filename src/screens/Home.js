@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './styles';
-import MyTime from '../components/MyTime';
+// import MyTime from '../components/MyTime';
 import Products from './Products';
 import Signin from './Signin';
 import Tables from './Tables';
 import Myfunccmp from '../components/myfunccmp'
-
+import MytimeFunc from '../components/MytimeFunc'
 
 class Home extends React.Component {
 	state = {
@@ -86,7 +86,7 @@ class Home extends React.Component {
                         </ul>
                     </div>
 					<div style={styles.left}>
-						<MyTime />
+						<MytimeFunc />
 					</div>
 				</div>
 				<div style={styles.main}>

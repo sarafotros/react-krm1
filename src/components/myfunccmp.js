@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
 
 export default (props) => {
-    const [count, setCount] = useState (0)
+    const [count, setCount] = useState(0)
+    
+    const Increment = () => {
+        setCount((count) => count + 1);
+    }
+
+    const Decrement = () => {
+	    setCount((count) => count - 1);
+	}
     
     return (
 			<div>
@@ -13,22 +21,17 @@ export default (props) => {
 						background: 'none',
 						borderBottom: '2px solid grey',
 					}}
-					onClick={() => {
-						setCount((count) => count + 1);
-					}}
-				>
+					onClick={Increment}>
 					Increase
 				</button>
 				<button
-					style={{
-						width: 90,
-						height: 35,
-						background: 'none',
-						borderBottom: '2px solid grey',
-					}}
-					onClick={() => {
-						setCount((count) => count - 1);
-					}}
+                style={{
+                    width: 90,
+                    height: 35,
+                    background: 'none',
+                    borderBottom: '2px solid grey',
+                }}
+                onClick={Decrement}
 				>
 					Decrease
 				</button>
