@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './styles';
 import Mybtn from '../components/Mybtn';
 // import Mybtnfunc from '../components/Mybtnfunc';
-import MyInput from '../components/MyInput';
+import MyInputFunc from '../components/MyinputFunc';
 
 export default function SigninFunc() {
 
@@ -14,11 +14,11 @@ export default function SigninFunc() {
 
     return (
 			<div style={styles.form}>
-				<MyInput
+				<MyInputFunc
 					regex={/^[a-z0-9._]{3,}@[a-z]{2,}\.[a-z]{2,4}$/i}
 					errorText="invalid email format"
 				/>
-				<MyInput
+				<MyInputFunc
 					regex={/^09[0-9]{9}$/}
 					errorText="invalid mobile number format"
 				/>

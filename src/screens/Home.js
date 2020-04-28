@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './styles';
-// import MyTime from '../components/MyTime';
 import Products from './Products';
-import Signin from './Signin';
-// import SigninFunc from './SigninFunc';
+// import Signin from './Signin';
+import SigninFunc from './SigninFunc';
 import Tables from './Tables';
 import Myfunccmp from '../components/myfunccmp'
 import MytimeFunc from '../components/MytimeFunc'
+// import SigninFunc from './signinFunc';
 
 class Home extends React.Component {
 	state = {
@@ -42,7 +42,7 @@ class Home extends React.Component {
 					) : this.state.page === 't' ? (
 						<Tables />
 					) : (
-						<Signin />
+						<SigninFunc />
 					)}
 				</div>
 				<div style={styles.footer}> <Myfunccmp/></div>
