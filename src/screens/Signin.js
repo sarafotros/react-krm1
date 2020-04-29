@@ -30,7 +30,6 @@ class Signin extends React.Component {
 						display: 'flex',
 						flexDirection: 'row',
 						justifyContent: 'space-around',
-						
 					}}
 				>
 					<Mybtn title="signup" bg="#EA80FC" onClick={this.myBtnClick} />
@@ -42,6 +41,7 @@ class Signin extends React.Component {
 						}}
 						title="counter"
 					/>
+					
 					<span style={{ marginLeft: 50, color: 'black', fontSize: 26 }}>
 						{this.state.counter}
 					</span>

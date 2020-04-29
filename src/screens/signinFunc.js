@@ -3,6 +3,10 @@ import styles from './styles';
 import Mybtn from '../components/Mybtn';
 // import Mybtnfunc from '../components/Mybtnfunc';
 import MyInputFunc from '../components/MyinputFunc';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
+
 
 export default function SigninFunc() {
 
@@ -30,11 +34,12 @@ export default function SigninFunc() {
 					}}
 				>
 					<Mybtn title="signup" bg="#EA80FC" onClick={myBtnClick} />
-					<Mybtn title="signin" bg="#EA80FC"  />
-					
+					{/* <Mybtn title="signin" bg="#EA80FC" /> */}
+					<Button variant="contained">Default</Button>
 					<span style={{ marginLeft: 50, color: 'black', fontSize: 26 }}>
 						{counter}
-					</span>
+				</span>
+				<IconButton><DeleteIcon/></IconButton>
 				</div>
 			</div>
 		);
