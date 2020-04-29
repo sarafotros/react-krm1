@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './styles';
-import Products from './Products';
+// import Products from './Products';
+import ProductsFunc from './ProductsFunc'
 // import Signin from './Signin';
 import SigninFunc from './SigninFunc';
 import Tables from './Tables';
@@ -38,7 +39,7 @@ class Home extends React.Component {
 				</div>
 				<div style={styles.main}>
 					{this.state.page === 'p' ? (
-						<Products />
+						<ProductsFunc />
 					) : this.state.page === 't' ? (
 						<Tables />
 					) : (
