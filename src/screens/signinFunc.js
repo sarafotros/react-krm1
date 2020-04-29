@@ -8,6 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 
+
 export default function SigninFunc() {
 
     const [counter, setCounter] = useState(0)
@@ -26,6 +27,7 @@ export default function SigninFunc() {
 					regex={/^09[0-9]{9}$/}
 					errorText="invalid mobile number format"
 				/>
+				
 				<div
 					style={{
 						display: 'flex',
@@ -38,8 +40,10 @@ export default function SigninFunc() {
 					<Button variant="contained">Default</Button>
 					<span style={{ marginLeft: 50, color: 'black', fontSize: 26 }}>
 						{counter}
-				</span>
-				<IconButton><DeleteIcon/></IconButton>
+					</span>
+					<IconButton>
+						<DeleteIcon />
+					</IconButton>
 				</div>
 			</div>
 		);

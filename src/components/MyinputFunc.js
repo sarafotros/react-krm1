@@ -1,9 +1,11 @@
 import React, { useState}from 'react'
+import TextField from '@material-ui/core/TextField';
+
 
 export default function MyinputFunc({ regex , errorText}) { 
     const [email, setEmail] = useState('')
     const [error , setError] = useState( false ) 
-
+	const [emailErrorText, setEmailErrorText] = useState('')
     return (
 			<div
 				style={{
@@ -16,23 +18,18 @@ export default function MyinputFunc({ regex , errorText}) {
 					flexDirection: 'column',
 				}}
 			>
-				<input
-                onBlur={(e) => {
-                    let value = e.target.value;
-                    let emailregex = regex;
-                    setError(!emailregex.test(value));
-                    setEmail(value)
-                     }}      
-					style={{
-						width: '80%',
-						border: 'none',
-						borderBottom: '1px solid #000',
-					}}
-					type="text"
-					placeholder="input..."
-				></input>
-				{error ? (
-					<span style={{ color: 'red', fontSize: 12, marginTop: 5 }}>
+			<TextField label="Email" onBlur={(e) => {
+				let value = e.target.value;
+				let emailregex = regex;
+				setError(!emailregex.test(value))
+				if (!emailregex.test(value)) {
+					setEmailErrorText('invalid Email format')
+				} else {
+					setEmailErrorText('')
+				}
+				setEmail(value);
+			}} style={{ width: '80%' }} helperText={emailErrorText} error={error}/>
+				     {error ? (<span style={{ color: 'red', fontSize: 12, marginTop: 5 }}>
 						{errorText}
 					</span>
 				) : null}
