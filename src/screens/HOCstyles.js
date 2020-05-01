@@ -8,22 +8,32 @@ const styles = {
 		width: '100%',
 		height: '100vh',
 		padding: '40px',
-		backgroundColor: 'rgba(25,118,210 ,0.6)',
+		backgroundColor: 'rgba(25,15,210 ,0.6)',
 		display: 'flex',
 		flexDirection: 'column',
 	},
 };
-class HOCstyles extends Component {
+
+const HOCstyles = (props) => {
+
+    const { classes} = props
+    return <div className={classes.root}>
+     HOC  
+    </div>;
+}
+
+
+// class HOCstyles extends Component {
 
     
-    render() {
-        const classes = this.props.classes
-        return (
-            <div className={classes.root}>
-                HOC
-            </div>
-        )
-    }
-}
+//     render() {
+//         const classes = this.props.classes
+//         return (
+//             <div className={classes.root}>
+//                 HOC
+//             </div>
+//         )
+//     }
+// }
 
 export default withStyles(styles)(HOCstyles)
