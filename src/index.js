@@ -5,13 +5,15 @@ import './index.css';
 // import  './assets/css/fontIran.css'
 import * as serviceWorker from './serviceWorker';
 import Home from "./screens/Home";
-import MyStyles from './screens/MtStyles'
+import MyStyles from './screens/MtStyles';
+import HOC from './screens/HOCstyles'
 
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <Home /> */}
-    <MyStyles/>
+    {/* <MyStyles/> */}
+    <HOC/>
   </React.StrictMode>,
   document.getElementById('root')
 );
