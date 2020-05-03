@@ -7,19 +7,25 @@ const useStyles = makeStyles({
         width: '100%',
         height: '100vh',
         padding: '40px',
-        backgroundColor: 'rgba(152,251,152 ,1)',
+        backgroundColor:  props =>props.backgroundColor,
         display: 'flex',
         flexDirection: 'column',
+        "& p": {
+           fontSize: 24     
+        }
+        
 	},
 });
 
 
 export default function MtStyles() {
+        const props = { backgroundColor: 'rgba(152,251,152 ,1)'}
     const classes = useStyles()
     return (
-			<div className={classes.root}>
-				<BtnStyled>Sign Up</BtnStyled>
-				<BtnStyled>Sign In</BtnStyled>
-			</div>
-		);
+            <div className={classes.root}>
+                <p>this is a p tag</p>
+                <BtnStyled>Sign Up</BtnStyled>
+                <BtnStyled>Sign In</BtnStyled>
+        </div>
+);
 }

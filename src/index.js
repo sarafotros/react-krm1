@@ -12,8 +12,8 @@ import HOC from './screens/HOCstyles'
 ReactDOM.render(
   <React.StrictMode>
     {/* <Home /> */}
-    {/* <MyStyles/> */}
-    <HOC/>
+    <MyStyles/>
+    {/* <HOC/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
