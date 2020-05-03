@@ -7,12 +7,12 @@ import * as serviceWorker from './serviceWorker';
 import Home from "./screens/Home";
 import MyStyles from './screens/MtStyles';
 import HOC from './screens/HOCstyles'
-
+import Index from './screens/index'
 
 ReactDOM.render(
   <React.StrictMode>
     {/* <Home /> */}
-    <MyStyles/>
+    <Index/>
     {/* <HOC/> */}
   </React.StrictMode>,
   document.getElementById('root')
