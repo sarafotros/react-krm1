@@ -15,7 +15,8 @@ const Palette = {
 		contrastText: green[50],
     },
     text: {
-        primary: '#00f'
+        primary: '#00f',
+        secondary: '#cc6'
     }
 };
 export default Palette;

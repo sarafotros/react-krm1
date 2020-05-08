@@ -8,7 +8,8 @@ const useStyles = makeStyles( theme =>({
   root: {
         width: '70%',
         height: '100vh',
-        padding: '40px',
+        padding: theme.spacing(2,4),
+        margin: '30px',
         background:  theme.background,
         display: 'flex',
         flexDirection: 'column',
@@ -29,7 +30,7 @@ export default function MtStyles() {
 				{/* <p style={{background: theme.background}}>this is a p tag</p> */}
 				{/* <BtnStyled btnSize='sm'>Sign Up</BtnStyled>
                 <BtnStyled>Sign In</BtnStyled> */}
-				<Typography fontSize>This is a typography</Typography>
+				<Typography variant='h1' color='error'>This is a typography</Typography>
 				<Button variant="contained" color="secondary">
 					THis Button
 				</Button>
