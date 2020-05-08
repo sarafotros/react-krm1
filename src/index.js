@@ -4,9 +4,9 @@ import './index.css';
 // import App from './App';
 // import  './assets/css/fontIran.css'
 import * as serviceWorker from './serviceWorker';
-import Home from "./screens/Home";
-import MyStyles from './screens/MtStyles';
-import HOC from './screens/HOCstyles'
+// import Home from "./screens/Home";
+// import MyStyles from './screens/MtStyles';
+// import HOC from './screens/HOCstyles'
 import Index from './screens/index'
 
 ReactDOM.render(
