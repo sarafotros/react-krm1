@@ -1,6 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import Palette from './Palette'
 const theme = createMuiTheme({
+    direction: 'rtl',
     spacing: factor => [0,4,8,16,32,64][factor],
     palette: Palette,
     typography: {

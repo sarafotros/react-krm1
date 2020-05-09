@@ -9,6 +9,7 @@ import * as serviceWorker from './serviceWorker';
 // import HOC from './screens/HOCstyles'
 import Index from './screens/index'
 
+document.getElementsByTagName('body')[0].setAttribute('dir', 'rtl')
 ReactDOM.render(
   <React.StrictMode>
     {/* <Home /> */}
