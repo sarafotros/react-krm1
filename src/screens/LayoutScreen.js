@@ -15,11 +15,26 @@ const useStyles = makeStyles((theme) => ({
 	},
 	bodyGrid: {
 		backgroundColor: theme.palette.primary.bodyBg,
-		minHeight: window.innerHeight-95,
+		minHeight: window.innerHeight - 95,
 	},
 	footerGrid: {
 		height: 45,
 		backgroundColor: theme.palette.primary.footerBg,
+	},
+	logoGrid: {
+		
+        backgroundColor: 'white',
+        width:100
+	},
+	menuGrid: {
+	
+        backgroundColor: 'lightBlue',
+        flex: 1
+	},
+	signBtnGrid: {
+		
+        backgroundColor: 'lightCoral',
+        width: 120
 	},
 }));
 
@@ -27,7 +42,11 @@ export default function LayoutScreen() {
     const classes = useStyles()
     return (
 			<Container className={classes.root}>
-				<Grid container className={classes.headerGrid}></Grid>
+            <Grid container justify='space-between' alignItems='stretch' className={classes.headerGrid}>
+                <Grid item className={classes.logoGrid}> </Grid>
+                <Grid item className={classes.menuGrid}> </Grid>
+                <Grid item className={classes.signBtnGrid}> </Grid>
+                </Grid>
 				<Grid container className={classes.bodyGrid}></Grid>
 				<Grid container className={classes.footerGrid}></Grid>
 				Container
