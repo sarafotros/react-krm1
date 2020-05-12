@@ -2,8 +2,9 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 import { Container, Grid, Hidden } from '@material-ui/core';
-
+import Link from '@material-ui/core/Link';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -22,21 +23,27 @@ const useStyles = makeStyles((theme) => ({
 		height: 45,
 		backgroundColor: theme.palette.primary.footerBg,
 	},
-	logoGrid: {
-		
-	},
+	logoGrid: {},
 	menuGrid: {
-		backgroundColor: 'lightBlue',
+		// backgroundColor: 'lightBlue',
+		paddingRight: theme.spacing(3),
 	},
 	signBtnGrid: {
-		backgroundColor: 'lightCoral',
+		// backgroundColor: 'lightCoral',
 	},
 	formGrid: {
 		height: 400,
 		backgroundColor: '#BBDEFB',
 	},
-    logoImg: {
-        width:80
+	logoImg: {
+		width: 80,
+	},
+    menuItemLink: {
+        marginLeft: theme.spacing(4),
+        "&:hover": {
+            textDecoration: 'none',
+            color: 'white'
+       }
     }
 }));
 
@@ -67,14 +74,49 @@ export default function LayoutScreen() {
 						/>
 					</Grid>
 					<Hidden smDown>
-						<Grid item className={classes.menuGrid} md={8} lg={9}>
-							Menu{' '}
+						<Grid
+							item
+							container
+							alignItems="center"
+							justify="space-evenly"
+							className={classes.menuGrid}
+							md={8}
+							lg={9}
+						>
+							<Link
+								component="button"
+								variant="body2"
+								className={classes.menuItemLink}
+							>About Us</Link>
+							<Link
+								component="button"
+								variant="body2"
+								className={classes.menuItemLink}
+							>
+								Courses
+							</Link>
+							<Link
+								component="button"
+								variant="body2"
+								className={classes.menuItemLink}
+							>
+								Main Page
+							</Link>
 						</Grid>
 					</Hidden>
-					<Grid item className={classes.signBtnGrid} xs={5} md={2} lg={2}>
-						<Button variant="contained" color="primary">
-							Primary
-						</Button>
+					<Grid
+						item
+						container
+						justify="center"
+						alignItems="center"
+						className={classes.signBtnGrid}
+						xs={5}
+						md={2}
+						lg={2}
+					>
+						<Button color="secondary">Login</Button>
+						<Typography>/</Typography>
+						<Button color="secondary">Sign up</Button>
 					</Grid>
 				</Grid>
 				<Grid

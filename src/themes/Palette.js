@@ -1,22 +1,22 @@
 import purple from '@material-ui/core/colors/purple';
-import green from '@material-ui/core/colors/green';
+import cyan from '@material-ui/core/colors/cyan';
 import blueGrey from '@material-ui/core/colors/blueGrey';
 
 const Palette = {
 	primary: {
-		main: purple[600],
+		main: purple[200],
 		dark: purple[800],
-		light: purple[400],
+		light: purple[100],
 		contrastText: purple[50],
 		headerBg: blueGrey[600],
 		bodyBg: blueGrey[100],
 		footerBg: blueGrey[800]
 	},
 	secondary: {
-		main: green[600],
-		dark: green[800],
-		light: green[400],
-		contrastText: green[50],
+		main: cyan[600],
+		dark: cyan[800],
+		light: cyan[400],
+		contrastText: cyan[50],
 	},
 	text: {
 		primary: '#000',
