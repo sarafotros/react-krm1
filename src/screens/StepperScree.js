@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-	return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+	return ['User Information', 'Payment Method', 'Confirm'];
 }
 
 function getStepContent(step) {
@@ -98,7 +98,7 @@ export default function VerticalLinearStepper() {
 				<Paper square elevation={0} className={classes.resetContainer}>
 					<Typography>All steps completed - you&apos;re finished</Typography>
 					<Button onClick={handleReset} className={classes.button}>
-						Reset
+						Start Again
 					</Button>
 				</Paper>
 			)}

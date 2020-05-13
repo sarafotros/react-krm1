@@ -1,7 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import Palette from './Palette'
 const theme = createMuiTheme({
-    direction: 'rtl',
+    direction: 'ltr',
     spacing: 2,
     palette: Palette,
     typography: {

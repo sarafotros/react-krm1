@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	logoGrid: {},
 	menuGrid: {
-		'& button:last-child': {
+		'& button:first-child': {
 			border: 'none',
 		},
 	},
@@ -84,7 +84,7 @@ export default function LayoutScreen() {
 							item
 							container
 							alignItems="center"
-							justify="flex-end"
+							// justify="
 							className={classes.menuGrid}
 							md={8}
 							lg={9}
@@ -94,14 +94,14 @@ export default function LayoutScreen() {
 								variant="body2"
 								className={classes.menuItemLink}
 							>
-								Contact Us
+								Main Page
 							</Link>
 							<Link
 								component="button"
 								variant="body2"
 								className={classes.menuItemLink}
 							>
-								About Us
+								Contact Us
 							</Link>
 							<Link
 								component="button"
@@ -115,7 +115,7 @@ export default function LayoutScreen() {
 								variant="body2"
 								className={classes.menuItemLink}
 							>
-								Main Page
+								About Us
 							</Link>
 						</Grid>
 					</Hidden>
@@ -148,9 +148,9 @@ export default function LayoutScreen() {
 						lg={6}
 						xl={4}
 						className={classes.formGrid}
-                >
-                    <StepperScreen/>
-                    </Grid>
+					>
+						<StepperScreen />
+					</Grid>
 				</Grid>
 				<Grid container className={classes.footerGrid}></Grid>
 				Container
