@@ -17,7 +17,7 @@ const theme = createMuiTheme({
             
         },
         body2: {
-            fontSize:26
+            fontSize:20
         }
     }
 })

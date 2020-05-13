@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Container, Grid, Hidden } from '@material-ui/core';
 import Link from '@material-ui/core/Link';
+import StepperScreen from '../screens/StepperScree' 
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -25,26 +26,31 @@ const useStyles = makeStyles((theme) => ({
 	},
 	logoGrid: {},
 	menuGrid: {
-		// backgroundColor: 'lightBlue',
-		paddingRight: theme.spacing(3),
+		'& button:last-child': {
+			border: 'none',
+		},
 	},
 	signBtnGrid: {
 		// backgroundColor: 'lightCoral',
 	},
 	formGrid: {
 		height: 400,
-		backgroundColor: '#BBDEFB',
+		// backgroundColor: '#BBDEFB',
 	},
 	logoImg: {
 		width: 80,
 	},
-    menuItemLink: {
-        marginLeft: theme.spacing(4),
-        "&:hover": {
-            textDecoration: 'none',
-            color: 'white'
-       }
-    }
+	menuItemLink: {
+		paddingRight: theme.spacing(5),
+		paddingLeft: theme.spacing(5),
+		borderLeftColor: '#ccc',
+		borderLeftStyle: 'solid',
+		borderLeftWidth: 1,
+		'&:hover': {
+			textDecoration: 'none',
+			color: 'white',
+		},
+	},
 }));
 
 export default function LayoutScreen() {
@@ -78,7 +84,7 @@ export default function LayoutScreen() {
 							item
 							container
 							alignItems="center"
-							justify="space-evenly"
+							justify="flex-end"
 							className={classes.menuGrid}
 							md={8}
 							lg={9}
@@ -87,7 +93,16 @@ export default function LayoutScreen() {
 								component="button"
 								variant="body2"
 								className={classes.menuItemLink}
-							>About Us</Link>
+							>
+								Contact Us
+							</Link>
+							<Link
+								component="button"
+								variant="body2"
+								className={classes.menuItemLink}
+							>
+								About Us
+							</Link>
 							<Link
 								component="button"
 								variant="body2"
@@ -133,7 +148,9 @@ export default function LayoutScreen() {
 						lg={6}
 						xl={4}
 						className={classes.formGrid}
-					></Grid>
+                >
+                    <StepperScreen/>
+                    </Grid>
 				</Grid>
 				<Grid container className={classes.footerGrid}></Grid>
 				Container
