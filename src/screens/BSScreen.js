@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Button, Container, Nav, Navbar, NavDropdown, FormControl, Form, Row, Col, Modal} from 'react-bootstrap'
+import { Button, Container, Nav, Navbar, NavDropdown, FormControl, Form, Row, Col, Modal, Carousel} from 'react-bootstrap'
 import MyCheckBox from '../components/MyCheckBox'
 
 
@@ -63,7 +63,45 @@ export default function BSScreen() {
 					sm={6}
 					md={9}
 					style={{ height: 250, backgroundColor: 'grey' }}
-				></Col>
+				>
+					<Carousel>
+						<Carousel.Item style={{ height: 200, width: 200 }}>
+							<img
+								className="d-block w-100"
+								src="https://www.lego.com/cdn/cs/set/assets/bltcd0100faa5d06448/Free_Delivery_2.png?quality=80&width=80&height=80&dpr=2"
+								alt="First slide"
+								style={{ height: 200, width: 200 }}
+							/>
+							<Carousel.Caption>
+								<h3>First slide label</h3>
+							</Carousel.Caption>
+						</Carousel.Item>
+						<Carousel.Item style={{ height: 200, width: 200 }}>
+							<img
+								style={{ height: 200, width: 200 }}
+								className="d-block w-100"
+								src="https://www.lego.com/cdn/cs/set/assets/blt69cb0994c8382b73/Missing_Pieces_2.png?quality=80&width=80&height=80&dpr=2"
+								alt="Third slide"
+							/>
+
+							<Carousel.Caption>
+								<h3>Second slide label</h3>
+							</Carousel.Caption>
+						</Carousel.Item>
+						<Carousel.Item style={{ height: 200, width: 200 }}>
+							<img
+								style={{ height: 200, width: 200 }}
+								className="d-block w-100"
+								src="https://www.lego.com/cdn/cs/set/assets/bltb81e3408774e5a59/VIP_Footer_2.png?quality=80&width=80&height=80&dpr=2"
+								alt="Third slide"
+							/>
+
+							<Carousel.Caption>
+								<h3>Third slide label</h3>
+							</Carousel.Caption>
+						</Carousel.Item>
+					</Carousel>
+				</Col>
 			</Row>
 			<Modal show={show} onHide={handleClose}>
 				<Modal.Header closeButton>
@@ -86,7 +124,7 @@ export default function BSScreen() {
 						{/* <Form.Group controlId="formBasicCheckbox">
 							<Form.Check type="checkbox" label="Check me out" />
 						</Form.Group> */}
-                     <MyCheckBox/>
+						<MyCheckBox />
 						<Button block variant="primary" type="submit">
 							Submit
 						</Button>
